@@ -74,12 +74,31 @@ class APIService: APIServiceProtocol {
         }
         
         guard (200...299).contains(httpResponse.statusCode) else {
+            // Try to decode error message
+            if let errorString = String(data: data, encoding: .utf8) {
+                print("API Error Response: \(errorString)")
+            }
             throw APIError.httpError(statusCode: httpResponse.statusCode)
+        }
+        
+        // Log response for debugging
+        if let responseString = String(data: data, encoding: .utf8) {
+            print("API Response: \(responseString)")
         }
         
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
-        return try decoder.decode(MissionCreateResponse.self, from: data)
+        
+        do {
+            return try decoder.decode(MissionCreateResponse.self, from: data)
+        } catch {
+            // Log decoding error with response data
+            if let responseString = String(data: data, encoding: .utf8) {
+                print("Decoding Error: \(error)")
+                print("Response Data: \(responseString)")
+            }
+            throw APIError.decodingError(error)
+        }
     }
 
     

@@ -50,7 +50,7 @@ struct BackendStatusView: View {
             }) {
                 Image(systemName: "arrow.clockwise")
                     .font(.system(size: 12, weight: .semibold))
-                    .foregroundColor(.frankensteinDarkGreen)
+                    .foregroundColor(.kiroPrimary)
             }
             .buttonStyle(.plain)
             .help("Refresh backend status")

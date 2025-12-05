@@ -22,14 +22,7 @@ struct LogsView: View {
     
     private var logsHeader: some View {
         HStack {
-            HStack(spacing: 10) {
-                Image(systemName: "terminal.fill")
-                    .font(.system(size: 18, weight: .bold))
-                    .foregroundColor(.frankensteinGreen)
-                Text("Execution Logs")
-                    .font(.system(size: 20, weight: .bold, design: .rounded))
-                    .foregroundColor(.frankensteinDarkGreen)
-            }
+            SectionHeader("Execution Logs", icon: "terminal.fill")
             Spacer()
             
             if showCopiedAlert {
@@ -47,33 +40,35 @@ struct LogsView: View {
     private var copiedAlertView: some View {
         HStack(spacing: 6) {
             Image(systemName: "checkmark.circle.fill")
-                .foregroundColor(.green)
+                .foregroundColor(.kiroSuccess)
                 .font(.system(size: 14, weight: .bold))
             Text("Copied!")
-                .font(.system(size: 12, weight: .semibold, design: .rounded))
-                .foregroundColor(.green)
+                .font(.system(size: 12, weight: .semibold, design: .default))
+                .foregroundColor(.kiroSuccess)
         }
         .padding(.horizontal, 10)
         .padding(.vertical, 6)
         .background(
             Capsule()
-                .fill(Color.green.opacity(0.15))
+                .fill(Color.kiroSuccess.opacity(0.15))
         )
         .transition(.scale.combined(with: .opacity))
     }
     
     private var logsCountView: some View {
         HStack(spacing: 4) {
-            BoltDecoration(size: 12, color: .frankensteinBolt)
+            Image(systemName: "list.number")
+                .font(.system(size: 12, weight: .semibold))
+                .foregroundColor(.kiroPrimary)
             Text("\(logs.count) entries")
-                .font(.system(size: 12, weight: .semibold, design: .rounded))
-                .foregroundColor(.frankensteinDarkGreen)
+                .font(.system(size: 12, weight: .semibold, design: .default))
+                .foregroundColor(.kiroPrimary)
         }
         .padding(.horizontal, 10)
         .padding(.vertical, 6)
         .background(
             Capsule()
-                .fill(Color.frankensteinGreen.opacity(0.1))
+                .fill(Color.kiroPrimary.opacity(0.1))
         )
     }
     
@@ -87,13 +82,13 @@ struct LogsView: View {
                     Circle()
                         .fill(
                             LinearGradient(
-                                colors: [.frankensteinGreen, .frankensteinDarkGreen],
+                                colors: [.kiroPrimary, .kiroPrimaryDark],
                                 startPoint: .top,
                                 endPoint: .bottom
                             )
                         )
+                        .shadow(color: .kiroPrimary.opacity(0.3), radius: 4, x: 0, y: 2)
                 )
-                .shadow(color: .frankensteinDarkGreen.opacity(0.3), radius: 4, x: 0, y: 2)
         }
         .buttonStyle(.plain)
         .help("Copy all logs to clipboard")
@@ -121,10 +116,13 @@ struct LogsView: View {
         .frame(minHeight: 350, maxHeight: .infinity)
         .background(
             RoundedRectangle(cornerRadius: 16)
-                .fill(Color.white)
+                .fill(Color.kiroCard)
                 .shadow(color: .black.opacity(0.08), radius: 8, x: 0, y: 4)
         )
-        .modifier(StitchedBorder(cornerRadius: 16, stitchCount: 6, borderColor: .frankensteinDarkGreen))
+        .overlay(
+            RoundedRectangle(cornerRadius: 16)
+                .stroke(Color.kiroPrimary.opacity(0.2), lineWidth: 1.5)
+        )
         .padding(.horizontal, 20)
         .padding(.bottom, 20)
     }
@@ -133,19 +131,19 @@ struct LogsView: View {
         VStack(spacing: 16) {
             ZStack {
                 Circle()
-                    .fill(Color.frankensteinGreen.opacity(0.1))
+                    .fill(Color.kiroPrimary.opacity(0.1))
                     .frame(width: 80, height: 80)
                 Image(systemName: "text.alignleft")
                     .font(.system(size: 40, weight: .medium))
-                    .foregroundColor(.frankensteinGreen.opacity(0.6))
+                    .foregroundColor(.kiroPrimary.opacity(0.6))
             }
             VStack(spacing: 8) {
                 Text("No logs yet")
-                    .font(.system(size: 18, weight: .bold, design: .rounded))
-                    .foregroundColor(.frankensteinDarkGreen)
+                    .font(.system(size: 18, weight: .bold, design: .default))
+                    .foregroundColor(.kiroPrimary)
                 Text("Logs will appear here when you start a mission")
-                    .font(.system(size: 14, weight: .medium, design: .rounded))
-                    .foregroundColor(.frankensteinDarkGreen.opacity(0.7))
+                    .font(.system(size: 14, weight: .medium, design: .default))
+                    .foregroundColor(.secondary)
                     .multilineTextAlignment(.center)
             }
         }
@@ -166,19 +164,19 @@ struct LogsView: View {
                 Circle()
                     .fill(
                         index % 2 == 0 ?
-                        Color.frankensteinGreen.opacity(0.15) :
-                        Color.frankensteinLightGreen.opacity(0.1)
+                        Color.kiroPrimary.opacity(0.15) :
+                        Color.kiroAccent.opacity(0.1)
                     )
                     .frame(width: 28, height: 28)
                 Text("\(index + 1)")
                     .font(.system(size: 11, weight: .bold, design: .monospaced))
-                    .foregroundColor(.frankensteinDarkGreen)
+                    .foregroundColor(.kiroPrimary)
             }
             
             Text(log)
                 .font(.system(size: 13, design: .monospaced))
                 .textSelection(.enabled)
-                .foregroundColor(.frankensteinDarkGreen.opacity(0.9))
+                .foregroundColor(.primary)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .lineSpacing(4)
         }
@@ -189,7 +187,7 @@ struct LogsView: View {
                 .fill(
                     index % 2 == 0 ?
                     Color.clear :
-                    Color.frankensteinGreen.opacity(0.05)
+                    Color.kiroPrimary.opacity(0.05)
                 )
         )
         .animation(.easeInOut(duration: 0.2), value: index)
@@ -203,4 +201,3 @@ struct LogsView: View {
         }
     }
 }
-

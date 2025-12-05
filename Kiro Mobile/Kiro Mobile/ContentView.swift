@@ -8,53 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var authService = AuthService()
-    @State private var isAuthenticated: Bool = false
-    @State private var missionViewModel: MissionViewModel?
+    @StateObject private var missionViewModel: MissionViewModel
     
-    var body: some View {
-        Group {
-            if isAuthenticated, let viewModel = missionViewModel {
-                MissionListView(viewModel: viewModel, onLogout: {
-                    isAuthenticated = false
-                    missionViewModel = nil
-                })
-                    .task {
-                        // Request notification permissions on app launch
-                        _ = await NotificationService.shared.requestAuthorization()
-                    }
-            } else {
-                LoginView {
-                    // Create mission view model after successful login
-                    createMissionViewModel()
-                    isAuthenticated = true
-                }
-            }
-        }
-        .onAppear {
-            checkAuthentication()
-            if isAuthenticated && missionViewModel == nil {
-                createMissionViewModel()
-            }
-        }
-    }
-    
-    private func checkAuthentication() {
-        isAuthenticated = authService.isAuthenticated
-    }
-    
-    private func createMissionViewModel() {
-        let settings = StorageService().loadSettings()
-        let token = authService.getToken()
-        let apiService = APIService(baseURL: settings.backendURL, authToken: token)
+    init() {
         let storageService = StorageService()
         let authService = AuthService()
+        let settings = storageService.loadSettings()
+        let token = authService.getToken()
+        let apiService = APIService(baseURL: settings.backendURL, authToken: token)
         
-        missionViewModel = MissionViewModel(
+        _missionViewModel = StateObject(wrappedValue: MissionViewModel(
             apiService: apiService,
             storageService: storageService,
             authService: authService
-        )
+        ))
+    }
+    
+    var body: some View {
+        MissionListView(viewModel: missionViewModel, onLogout: nil)
+            .task {
+                // Request notification permissions on app launch
+                _ = await NotificationService.shared.requestAuthorization()
+            }
     }
 }
 

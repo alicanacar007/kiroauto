@@ -69,3 +69,4 @@ echo -e "${YELLOW}Press Ctrl+C to stop the server${NC}\n"
 uvicorn app.main:app --host 0.0.0.0 --port 5757 --reload
 
 
+

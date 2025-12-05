@@ -25,6 +25,25 @@ struct Step: Codable, Identifiable, Equatable {
         case status
         case logs
     }
+    
+    init(stepId: String, title: String, actions: [Action], expectMarker: String?, status: StepStatus = .pending, logs: StepLogs? = nil) {
+        self.stepId = stepId
+        self.title = title
+        self.actions = actions
+        self.expectMarker = expectMarker
+        self.status = status
+        self.logs = logs
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        stepId = try container.decode(String.self, forKey: .stepId)
+        title = try container.decode(String.self, forKey: .title)
+        actions = try container.decode([Action].self, forKey: .actions)
+        expectMarker = try container.decodeIfPresent(String.self, forKey: .expectMarker)
+        status = try container.decodeIfPresent(StepStatus.self, forKey: .status) ?? .pending
+        logs = try container.decodeIfPresent(StepLogs.self, forKey: .logs)
+    }
 }
 
 enum StepStatus: String, Codable, Equatable {

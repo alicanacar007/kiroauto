@@ -18,8 +18,10 @@ struct Action: Codable, Equatable {
 
 enum ActionType: String, Codable, Equatable {
     case openApp = "open_app"
+    case openProject = "open_project"
     case screenshot
     case runCommand = "run_command"
-    case kiroPrompt = "kiro_prompt"
+    case kiroPrompt = "prompt_kiro_ai"
     case waitForMarker = "wait_for_marker"
+    case applyPatch = "apply_patch"
 }

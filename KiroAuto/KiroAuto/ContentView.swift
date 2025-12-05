@@ -56,68 +56,72 @@ struct ContentView: View {
     }
     
     private var headerView: some View {
-        VStack(spacing: 16) {
-            // Logo header with AWS and Kiro logos
+        VStack(spacing: 20) {
+            // Logo header
             LogoHeaderView()
             
-            HStack(spacing: 20) {
-                // Frankenstein character on the left
-                FloatingFrankenstein(size: 100)
-                    .padding(.leading, 20)
-                
-                VStack(spacing: 8) {
-                    HStack(spacing: 12) {
-                        // Frankenstein bolt decoration
-                        BoltDecoration(size: 32, color: .frankensteinBolt)
-                            .pulsing(duration: 3.0)
+            VStack(spacing: 12) {
+                HStack(spacing: 16) {
+                    // App icon/logo placeholder
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 16)
+                            .fill(
+                                LinearGradient(
+                                    colors: [.kiroPrimary, .kiroPrimaryDark],
+                                    startPoint: .topLeading,
+                                    endPoint: .bottomTrailing
+                                )
+                            )
+                            .frame(width: 64, height: 64)
+                            .shadow(color: .kiroPrimary.opacity(0.4), radius: 8, x: 0, y: 4)
                         
-                        Text("Kiro Auto Controller")
-                            .font(.system(size: 32, weight: .bold, design: .rounded))
-                            .foregroundColor(.frankensteinDarkGreen)
-                        
-                        BoltDecoration(size: 32, color: .frankensteinBolt)
-                            .pulsing(duration: 3.0)
-                        
-                        // Siri button - more visible
-                        Button(action: {
-                            withAnimation(.easeInOut(duration: 0.3)) {
-                                showSiriCircle.toggle()
-                            }
-                        }) {
-                            ZStack {
-                                Circle()
-                                    .fill(
-                                        LinearGradient(
-                                            colors: [.frankensteinGreen, .frankensteinDarkGreen],
-                                            startPoint: .topLeading,
-                                            endPoint: .bottomTrailing
-                                        )
-                                    )
-                                    .frame(width: 44, height: 44)
-                                    .shadow(color: .frankensteinDarkGreen.opacity(0.4), radius: 4, x: 0, y: 2)
-                                
-                                Image(systemName: "mic.fill")
-                                    .font(.system(size: 20, weight: .semibold))
-                                    .foregroundColor(.white)
-                            }
-                        }
-                        .buttonStyle(.plain)
-                        .help("Show Siri Circle")
-                        .padding(.leading, 8)
+                        Image(systemName: "sparkles.rectangle.stack.fill")
+                            .font(.system(size: 32, weight: .semibold))
+                            .foregroundColor(.white)
                     }
                     
-                    Text("Autonomous Development Assistant")
-                        .font(.system(size: 16, weight: .medium, design: .rounded))
-                        .foregroundColor(.frankensteinDarkGreen.opacity(0.8))
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("Kiro Auto Remote Vibe Coder")
+                            .font(.system(size: 32, weight: .bold, design: .default))
+                            .foregroundColor(.kiroPrimary)
+                        
+                        Text("Autonomous Development Assistant")
+                            .font(.system(size: 16, weight: .medium, design: .default))
+                            .foregroundColor(.secondary)
+                    }
+                    
+                    Spacer()
+                    
+                    // Voice control button
+                    Button(action: {
+                        withAnimation(.easeInOut(duration: 0.3)) {
+                            showSiriCircle.toggle()
+                        }
+                    }) {
+                        ZStack {
+                            Circle()
+                                .fill(
+                                    LinearGradient(
+                                        colors: [.kiroPrimary, .kiroPrimaryDark],
+                                        startPoint: .topLeading,
+                                        endPoint: .bottomTrailing
+                                    )
+                                )
+                                .frame(width: 52, height: 52)
+                                .shadow(color: .kiroPrimary.opacity(0.4), radius: 8, x: 0, y: 4)
+                            
+                            Image(systemName: "mic.fill")
+                                .font(.system(size: 22, weight: .semibold))
+                                .foregroundColor(.white)
+                        }
+                    }
+                    .buttonStyle(.plain)
+                    .help("Voice Control")
                 }
                 
-                // Frankenstein character on the right
-                FloatingFrankenstein(size: 100)
-                    .padding(.trailing, 20)
+                // Backend status indicator
+                BackendStatusView(backendService: backendService)
             }
-            
-            // Backend status indicator
-            BackendStatusView(backendService: backendService)
         }
         .padding(.top, 24)
         .padding(.bottom, 20)
@@ -126,9 +130,8 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                // Frankenstein-themed background
-                Color.frankensteinBackground
-                    .ignoresSafeArea()
+                // Modern gradient background
+                GradientBackground()
                 
                 VStack(spacing: 0) {
                     permissionBanner
@@ -138,7 +141,7 @@ struct ContentView: View {
                     logsSection
                 }
                 
-                // Floating Siri button in top-right corner
+                // Floating voice button in top-right corner
                 VStack {
                     HStack {
                         Spacer()
@@ -151,13 +154,13 @@ struct ContentView: View {
                                 Circle()
                                     .fill(
                                         LinearGradient(
-                                            colors: [.frankensteinGreen, .frankensteinDarkGreen],
+                                            colors: [.kiroPrimary, .kiroPrimaryDark],
                                             startPoint: .topLeading,
                                             endPoint: .bottomTrailing
                                         )
                                     )
                                     .frame(width: 56, height: 56)
-                                    .shadow(color: .frankensteinDarkGreen.opacity(0.5), radius: 8, x: 0, y: 4)
+                                    .shadow(color: .kiroPrimary.opacity(0.5), radius: 12, x: 0, y: 4)
                                 
                                 Image(systemName: "mic.fill")
                                     .font(.system(size: 24, weight: .semibold))
@@ -165,7 +168,7 @@ struct ContentView: View {
                             }
                         }
                         .buttonStyle(.plain)
-                        .help("Show Siri Circle")
+                        .help("Voice Control")
                         .padding(.top, 16)
                         .padding(.trailing, 20)
                     }

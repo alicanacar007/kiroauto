@@ -41,3 +41,4 @@ Developers waste countless hours on repetitive setup tasks, boilerplate code, an
 - **iOS Client**: SwiftUI
 - **AI**: Google Gemini API for planning and vision analysis
 
+

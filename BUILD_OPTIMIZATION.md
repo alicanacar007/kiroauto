@@ -104,3 +104,4 @@ Eğer build hala yavaşsa:
    - Hangi adımın yavaş olduğunu görün
 
 
+

@@ -65,6 +65,12 @@ struct SettingsView: View {
                         .disableAutocorrection(true)
                 }
                 
+                Section(header: Text("Repository Configuration")) {
+                    TextField("Demo Repository Path", text: $viewModel.settings.demoRepoPath)
+                        .autocapitalization(.none)
+                        .disableAutocorrection(true)
+                }
+                
                 Section {
                     Button {
                         viewModel.saveSettings()

@@ -25,7 +25,7 @@ struct PermissionBanner: View {
                 Text("Accessibility Permission Required")
                     .font(.system(size: 16, weight: .bold, design: .rounded))
                     .foregroundColor(.orange)
-                Text("KiroAuto needs Accessibility access to control Kiro and automate tasks")
+                Text("Kiro Auto Remote Vibe Coder needs Accessibility access to control Kiro and automate tasks")
                     .font(.system(size: 13, weight: .medium, design: .rounded))
                     .foregroundColor(.orange.opacity(0.8))
             }
@@ -115,7 +115,10 @@ struct PermissionBanner: View {
                     )
                 )
         )
-        .modifier(StitchedBorder(cornerRadius: 12, stitchCount: 4, borderColor: .orange))
+        .overlay(
+            RoundedRectangle(cornerRadius: 12)
+                .stroke(Color.orange.opacity(0.3), lineWidth: 2)
+        )
         .padding(.horizontal, 20)
         .padding(.top, 20)
     }

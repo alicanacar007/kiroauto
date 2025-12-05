@@ -7,6 +7,9 @@
 
 import Foundation
 import SwiftUI
+#if canImport(UIKit)
+import UIKit
+#endif
 
 @MainActor
 class MissionViewModel: ObservableObject {
@@ -48,13 +51,25 @@ class MissionViewModel: ObservableObject {
     }
     
     func createMission(prompt: String, repoPath: String) async -> Bool {
-        guard let username = authService.getUsername() else {
-            errorMessage = "Please set your username in settings"
-            return false
+        // Clear any previous errors
+        errorMessage = nil
+        
+        // Use saved username or default to device name or "mobile-user"
+        let username: String
+        if let savedUsername = authService.getUsername(), !savedUsername.isEmpty {
+            username = savedUsername
+        } else {
+            // Use device name as default, or fallback to "mobile-user"
+            #if os(iOS)
+            username = UIDevice.current.name.isEmpty ? "mobile-user" : UIDevice.current.name
+            #else
+            username = "mobile-user"
+            #endif
+            // Save the default username for future use
+            authService.saveUsername(username)
         }
         
         isLoading = true
-        errorMessage = nil
         
         let settings = storageService.loadSettings()
         let macId = settings.macId
@@ -75,6 +90,20 @@ class MissionViewModel: ObservableObject {
             
             isLoading = false
             return true
+        } catch let apiError as APIError {
+            switch apiError {
+            case .decodingError(let error):
+                errorMessage = "Failed to parse server response. Please try again."
+                print("Decoding error details: \(error)")
+            case .httpError(let statusCode):
+                errorMessage = "Server error (status: \(statusCode)). Please try again."
+            case .networkError(let error):
+                errorMessage = "Network error: \(error.localizedDescription)"
+            case .invalidResponse:
+                errorMessage = "Invalid response from server. Please try again."
+            }
+            isLoading = false
+            return false
         } catch {
             errorMessage = "Failed to create mission: \(error.localizedDescription)"
             isLoading = false
