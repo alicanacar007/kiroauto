@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		689DE7042EE2D7E300EB6755 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 689DE6E62EE2D7DF00EB6755 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 689DE6ED2EE2D7DF00EB6755;
+			remoteInfo = "Kiro Mobile";
+		};
+		689DE70E2EE2D7E300EB6755 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 689DE6E62EE2D7DF00EB6755 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 689DE6ED2EE2D7DF00EB6755;
+			remoteInfo = "Kiro Mobile";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		689DE6EE2EE2D7DF00EB6755 /* Kiro Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kiro Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		689DE7032EE2D7E300EB6755 /* Kiro MobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kiro MobileTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		689DE70D2EE2D7E300EB6755 /* Kiro MobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kiro MobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		689DE6F02EE2D7DF00EB6755 /* Kiro Mobile */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Kiro Mobile";
+			sourceTree = "<group>";
+		};
+		689DE7062EE2D7E300EB6755 /* Kiro MobileTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Kiro MobileTests";
+			sourceTree = "<group>";
+		};
+		689DE7102EE2D7E300EB6755 /* Kiro MobileUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Kiro MobileUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		689DE6EB2EE2D7DF00EB6755 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		689DE7002EE2D7E300EB6755 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		689DE70A2EE2D7E300EB6755 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		689DE6E52EE2D7DF00EB6755 = {
+			isa = PBXGroup;
+			children = (
+				689DE6F02EE2D7DF00EB6755 /* Kiro Mobile */,
+				689DE7062EE2D7E300EB6755 /* Kiro MobileTests */,
+				689DE7102EE2D7E300EB6755 /* Kiro MobileUITests */,
+				689DE6EF2EE2D7DF00EB6755 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		689DE6EF2EE2D7DF00EB6755 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				689DE6EE2EE2D7DF00EB6755 /* Kiro Mobile.app */,
+				689DE7032EE2D7E300EB6755 /* Kiro MobileTests.xctest */,
+				689DE70D2EE2D7E300EB6755 /* Kiro MobileUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		689DE6ED2EE2D7DF00EB6755 /* Kiro Mobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 689DE7172EE2D7E300EB6755 /* Build configuration list for PBXNativeTarget "Kiro Mobile" */;
+			buildPhases = (
+				689DE6EA2EE2D7DF00EB6755 /* Sources */,
+				689DE6EB2EE2D7DF00EB6755 /* Frameworks */,
+				689DE6EC2EE2D7DF00EB6755 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				689DE6F02EE2D7DF00EB6755 /* Kiro Mobile */,
+			);
+			name = "Kiro Mobile";
+			packageProductDependencies = (
+			);
+			productName = "Kiro Mobile";
+			productReference = 689DE6EE2EE2D7DF00EB6755 /* Kiro Mobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		689DE7022EE2D7E300EB6755 /* Kiro MobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 689DE71A2EE2D7E300EB6755 /* Build configuration list for PBXNativeTarget "Kiro MobileTests" */;
+			buildPhases = (
+				689DE6FF2EE2D7E300EB6755 /* Sources */,
+				689DE7002EE2D7E300EB6755 /* Frameworks */,
+				689DE7012EE2D7E300EB6755 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				689DE7052EE2D7E300EB6755 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				689DE7062EE2D7E300EB6755 /* Kiro MobileTests */,
+			);
+			name = "Kiro MobileTests";
+			packageProductDependencies = (
+			);
+			productName = "Kiro MobileTests";
+			productReference = 689DE7032EE2D7E300EB6755 /* Kiro MobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		689DE70C2EE2D7E300EB6755 /* Kiro MobileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 689DE71D2EE2D7E300EB6755 /* Build configuration list for PBXNativeTarget "Kiro MobileUITests" */;
+			buildPhases = (
+				689DE7092EE2D7E300EB6755 /* Sources */,
+				689DE70A2EE2D7E300EB6755 /* Frameworks */,
+				689DE70B2EE2D7E300EB6755 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				689DE70F2EE2D7E300EB6755 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				689DE7102EE2D7E300EB6755 /* Kiro MobileUITests */,
+			);
+			name = "Kiro MobileUITests";
+			packageProductDependencies = (
+			);
+			productName = "Kiro MobileUITests";
+			productReference = 689DE70D2EE2D7E300EB6755 /* Kiro MobileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		689DE6E62EE2D7DF00EB6755 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					689DE6ED2EE2D7DF00EB6755 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					689DE7022EE2D7E300EB6755 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 689DE6ED2EE2D7DF00EB6755;
+					};
+					689DE70C2EE2D7E300EB6755 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 689DE6ED2EE2D7DF00EB6755;
+					};
+				};
+			};
+			buildConfigurationList = 689DE6E92EE2D7DF00EB6755 /* Build configuration list for PBXProject "Kiro Mobile" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 689DE6E52EE2D7DF00EB6755;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 689DE6EF2EE2D7DF00EB6755 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				689DE6ED2EE2D7DF00EB6755 /* Kiro Mobile */,
+				689DE7022EE2D7E300EB6755 /* Kiro MobileTests */,
+				689DE70C2EE2D7E300EB6755 /* Kiro MobileUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		689DE6EC2EE2D7DF00EB6755 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		689DE7012EE2D7E300EB6755 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		689DE70B2EE2D7E300EB6755 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		689DE6EA2EE2D7DF00EB6755 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		689DE6FF2EE2D7E300EB6755 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		689DE7092EE2D7E300EB6755 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		689DE7052EE2D7E300EB6755 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 689DE6ED2EE2D7DF00EB6755 /* Kiro Mobile */;
+			targetProxy = 689DE7042EE2D7E300EB6755 /* PBXContainerItemProxy */;
+		};
+		689DE70F2EE2D7E300EB6755 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 689DE6ED2EE2D7DF00EB6755 /* Kiro Mobile */;
+			targetProxy = 689DE70E2EE2D7E300EB6755 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		689DE7152EE2D7E300EB6755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		689DE7162EE2D7E300EB6755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		689DE7182EE2D7E300EB6755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Kiro Mobile/Preview Content\"";
+				DEVELOPMENT_TEAM = 433SKL9HT3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "alicanacar.Kiro-Mobile";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		689DE7192EE2D7E300EB6755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Kiro Mobile/Preview Content\"";
+				DEVELOPMENT_TEAM = 433SKL9HT3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "alicanacar.Kiro-Mobile";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		689DE71B2EE2D7E300EB6755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 433SKL9HT3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "alicanacar.Kiro-MobileTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kiro Mobile.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kiro Mobile";
+			};
+			name = Debug;
+		};
+		689DE71C2EE2D7E300EB6755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 433SKL9HT3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "alicanacar.Kiro-MobileTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kiro Mobile.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kiro Mobile";
+			};
+			name = Release;
+		};
+		689DE71E2EE2D7E300EB6755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 433SKL9HT3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "alicanacar.Kiro-MobileUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Kiro Mobile";
+			};
+			name = Debug;
+		};
+		689DE71F2EE2D7E300EB6755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 433SKL9HT3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "alicanacar.Kiro-MobileUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Kiro Mobile";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		689DE6E92EE2D7DF00EB6755 /* Build configuration list for PBXProject "Kiro Mobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				689DE7152EE2D7E300EB6755 /* Debug */,
+				689DE7162EE2D7E300EB6755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		689DE7172EE2D7E300EB6755 /* Build configuration list for PBXNativeTarget "Kiro Mobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				689DE7182EE2D7E300EB6755 /* Debug */,
+				689DE7192EE2D7E300EB6755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		689DE71A2EE2D7E300EB6755 /* Build configuration list for PBXNativeTarget "Kiro MobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				689DE71B2EE2D7E300EB6755 /* Debug */,
+				689DE71C2EE2D7E300EB6755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		689DE71D2EE2D7E300EB6755 /* Build configuration list for PBXNativeTarget "Kiro MobileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				689DE71E2EE2D7E300EB6755 /* Debug */,
+				689DE71F2EE2D7E300EB6755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 689DE6E62EE2D7DF00EB6755 /* Project object */;
+}

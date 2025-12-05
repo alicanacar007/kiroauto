@@ -1,0 +1,17 @@
+//
+//  Kiro_MobileTests.swift
+//  Kiro MobileTests
+//
+//  Created by Ali Can Acar on 12/5/25.
+//
+
+import Testing
+@testable import Kiro_Mobile
+
+struct Kiro_MobileTests {
+
+    @Test func example() async throws {
+        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+    }
+
+}
